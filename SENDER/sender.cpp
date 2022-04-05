@@ -2,7 +2,7 @@
 
 #include"sender.h"
 
-stubSensorSimulationint stubSensorSimulation()
+int stubSensorSimulation()
 {  
    static int value;
    value++;
@@ -10,7 +10,7 @@ stubSensorSimulationint stubSensorSimulation()
 }
 
 
-TEST_CASE("Checks the sender output Temperature and SOC physical value which is printed in a structure)
+TEST_CASE("Checks the sender output Temperature and SOC physical value which is printed in a structure")
  {
 	batteryParameter* expectedOutput = {{-39,1} ,{-38,1},{-37,2},{-36,2},{-35,2},{-34,2},{-33,2},{-32,2} }
 	batteryParameter* actualOutput = getFromSensorSendToConsole(8,&stubSensorSimulation,&stubSensorSimulation,q1p0_o40,q0p5_o0,&printOnConsole);
