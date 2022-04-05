@@ -15,7 +15,7 @@ TEST_CASE("Checks the sender output Temperature and SOC physical value which is 
  {
 	batteryParameter expectedOutput[4] = {{-39,3} ,{-38,3},{-37,4},{-36,4}};
 	batteryParameter* actualOutput = getFromSensorSendToConsole(4,&stubSensorSimulation,&stubSensorSimulation,q1p0_o40,q0p5_o0,&printOnConsole);
-	for (int i=1;i<5;i++)
+	for (int i=0;i<4;i++)
 	{
 		REQUIRE(expectedOutput[i].temp == actualOutput[i].temp);
 		REQUIRE(expectedOutput[i].soc == actualOutput[i].soc);
