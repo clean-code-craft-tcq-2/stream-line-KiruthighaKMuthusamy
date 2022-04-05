@@ -13,7 +13,7 @@ int stubSensorSimulation()
 
 TEST_CASE("Checks the sender output Temperature and SOC physical value which is printed in a structure")
  {
-	batteryParameter expectedOutput[4] = {{-39,5} ,{-38,5},{-37,6},{-36,6}};
+	batteryParameter expectedOutput[4] = {{-39,3} ,{-38,3},{-37,4},{-36,4}};
 	batteryParameter* actualOutput = getFromSensorSendToConsole(4,&stubSensorSimulation,&stubSensorSimulation,q1p0_o40,q0p5_o0,&printOnConsole);
 	for (int i=1;i<5;i++)
 	{
