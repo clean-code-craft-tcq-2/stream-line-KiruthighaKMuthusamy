@@ -21,6 +21,5 @@ TEST_CASE("Checks the sender output Temperature and SOC physical value which is 
 		REQUIRE(expectedOutput[i].soc == actualOutput[i].soc);
 	}
 	free(actualOutput);
-	free(expectedOutput);
-	
+		
 }
