@@ -14,7 +14,7 @@ struct batteryParameter
 };
 
 extern float* structToTempArray(batteryParameter* tempSocValuesInBAtt);
-extern float* structToSOCArray(batteryParameter* tempSocValuesInBAtt)
+extern float* structToSOCArray(batteryParameter* tempSocValuesInBAtt);
 extern float getMinimumTempValue(float* temp, int noOfValues);
 //extern float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
 //extern float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
