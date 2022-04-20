@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <iostream>
 #include "receiver.h"
 #include"test/catch.hpp"
 
