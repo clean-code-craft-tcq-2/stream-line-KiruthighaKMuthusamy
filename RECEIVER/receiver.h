@@ -13,8 +13,8 @@ struct
   float SOC[NO_OF_VALUES];
 }batteryParameter;
 
-extern float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
-extern float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
-extern float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
-extern float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
+extern float getMinimumTempValue(float* temp, int noOfValues);
+//extern float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
+//extern float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
+//extern float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
 
