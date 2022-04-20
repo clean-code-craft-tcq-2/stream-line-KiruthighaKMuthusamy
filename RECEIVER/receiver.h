@@ -9,8 +9,8 @@
 
 typedef struct 
 {
-  float temperature[NO_OF_VALUES];
-  float SOC[NO_OF_VALUES];
+  float temperature[3];
+  float SOC[3];
 }batteryParameter;
 
 extern float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
