@@ -86,7 +86,7 @@ float getAverageOfLastFive(float* array, int noOfValues)
   float average = 0;
   for(i=0; i<5; i++)
   {
-    average = *(array + (noOfValues-5));
+    average += *(array + (noOfValues-5));
     array++;
   }
   average = average/5;
