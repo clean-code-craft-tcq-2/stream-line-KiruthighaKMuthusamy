@@ -7,7 +7,7 @@
 #define MAX_SOC_VALUE 100
 #define NO_OF_VALUES 50
 
-typedef struct 
+struct 
 {
   float temperature[3];
   float SOC[3];
