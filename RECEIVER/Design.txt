@@ -1,0 +1,5 @@
+Output structure received from the Sender console is taken as input and segregated to an array of values(temperature and SOC respectively).
+The minimum and maximum of these arrays are calculated and verified.
+The average of the last 5 values of these arrays are calculated and verified.
+Assumptions made: The array values do not extend beyond 0 in the lower limit and 100 in the upper limit.
+Functional Interface from sender to receiver is added but the linkage logic is yet to be designed.
