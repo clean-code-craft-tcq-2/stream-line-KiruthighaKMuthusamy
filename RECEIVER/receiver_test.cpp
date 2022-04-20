@@ -41,14 +41,18 @@ TEST_CASE("Check for maximum SOC value")
   result = getMaximumSOCValue(SOC,noOfValues);
   REQUIRE(result==expectedSOC);
 }
-TEST_CASE("Check for average of last 5 values")
+TEST_CASE("Check for average of last 5 temp values")
 {
-  float average_temp,average_SOC;
+  float average_temp;
   float Temp[] = {22.1, 21.6, 20.9, 0.6, 0.5, 9.6, 2.3, 4.2, 99.6, 6.2};
   float expectedavg_temp = 24.38;
   int noOfValues_temp = (sizeof(Temp))/(sizeof(Temp[0]));
   average_temp = getAverageOfLastFive(Temp, noOfValues_temp);
-  REQUIRE(average_temp == expectedavg_temp );
+  REQUIRE(average_temp == expectedavg_temp );  
+}
+TEST_CASE("Check for average of last 5 SOC values")
+{
+  float average_SOC;
   float SOC[] = {9.6, 2.3, 4.2, 99.6, 6.2, 22.1, 21.6, 20.9, 0.6, 0.5};
   float expectedavg_SOC = 13.14;
   int noOfValues_SOC = (sizeof(SOC))/(sizeof(SOC[0]));
