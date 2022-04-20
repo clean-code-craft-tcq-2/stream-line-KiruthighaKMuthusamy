@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "receiver.h"
 
+/*Interface functions to fetch from sender output structure to receiver input array*/
 float* structToTempArray(batteryParameter* tempSocValuesInBAtt)/* tempSocValuesInBAtt is available from the printconsole from the sender*/
 {
   int i;
@@ -36,45 +37,45 @@ float getMinimumTempValue(float* temp, int noOfValues)
   }
   return temp_min;
 }
-/*
-float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) 
+
+float getMinimumSOCValue(float* soc, int noOfValues) 
 {
   int i;
   float SOC_min = MAX_SOC_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt->SOC[i] < SOC_min)
+    if(soc[i] < SOC_min)
     {
-      SOC_min = tempSocValuesInBAtt->SOC[i];
+      SOC_min = soc[i];
     }    
   }
   return SOC_min;
 }
 
-float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) 
+float getMaximumTempValue(float* temp, int noOfValues) 
 {
   int i;
   float temp_max = MIN_TEMP_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt->temperature[i] > temp_max)
+    if(temp[i] > temp_max)
     {
-      temp_max = tempSocValuesInBAtt->temperature[i];
+      temp_max = temp[i];
     }    
   }
   return temp_max;
 }
 
-float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) 
+float getMaximumSOCValue(float* soc, int noOfValues) 
 {
   int i;
   float SOC_max = MIN_SOC_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt->SOC[i] > SOC_max)
+    if(soc[i] > SOC_max)
     {
-      SOC_max = tempSocValuesInBAtt->SOC[i];
+      SOC_max = soc[i];
     }    
   }
   return SOC_max;
-}*/
+}
