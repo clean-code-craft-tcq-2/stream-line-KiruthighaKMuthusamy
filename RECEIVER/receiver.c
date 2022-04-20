@@ -1,8 +1,29 @@
 #include <stdio.h>
 #include "receiver.h"
 
-float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
+float* structToTempArray(batteryParameter* tempSocValuesInBAtt)/* tempSocValuesInBAtt is available from the printconsole from the sender*/
 {
+  int i;
+  float temp[NO_OF_VALUES] = {0};
+  for(i=0; i<NO_OF_VALUES; i++)
+  {
+    temp[i] = tempSocValuesInBAtt->temperature[i];    
+  }
+  return temp;
+}
+
+float* structToSOCArray(batteryParameter* tempSocValuesInBAtt)/* tempSocValuesInBAtt is available from the printconsole from the sender*/
+{
+  int i;
+  float soc[NO_OF_VALUES] = {0};
+  for(i=0; i<NO_OF_VALUES; i++)
+  {
+    soc[i] = tempSocValuesInBAtt->SOC[i];    
+  }
+  return soc;
+}
+
+float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) 
   int i;
   float temp_min = MAX_TEMP_VALUE;
   for(i=0; i<noOfValues; i++)
