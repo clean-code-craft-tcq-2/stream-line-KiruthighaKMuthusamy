@@ -12,8 +12,8 @@ TEST_CASE("Check for minimum temperature value")
     {36, 2.6, 2.3};
   }    
   //tempSocValuesInBAtt->SOC[3] = {36, 2.6, 2.3};
-  int noOfValues = (sizeof(tempSocValuesInBAtt->temperature[3]))/(sizeof(int));  
-  float expectedTemp = 2.3;
+  int noOfValues = 3;  
+  float expectedTemp = 1.2;
   result = getMinimumTempValue(tempSocValuesInBAtt,noOfValues);
   REQUIRE(result==expectedTemp);
 }
