@@ -24,6 +24,7 @@ float* structToSOCArray(batteryParameter* tempSocValuesInBAtt)/* tempSocValuesIn
 }
 
 float getMinimumTempValue(float* temp, int noOfValues) 
+{
   int i;
   float temp_min = MAX_TEMP_VALUE;
   for(i=0; i<noOfValues; i++)
