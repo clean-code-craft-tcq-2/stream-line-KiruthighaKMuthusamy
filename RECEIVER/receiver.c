@@ -92,4 +92,4 @@ float getAverageOfLastFive(float* array, int noOfValues)
   average = average/5;
   return average;
 }
-}
+
