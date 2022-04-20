@@ -9,8 +9,8 @@
 
 struct batteryParameter
 {
-  float temperature[];
-  float SOC[];
+  float* temperature;
+  float* SOC;
 };
 
 extern float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
