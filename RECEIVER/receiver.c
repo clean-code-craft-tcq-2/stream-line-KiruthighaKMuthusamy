@@ -7,9 +7,9 @@ float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValue
   float temp_min = MAX_TEMP_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt[i].temperature < temp_min)
+    if(tempSocValuesInBAtt.temperature[i] < temp_min)
     {
-      temp_min = tempSocValuesInBAtt[i].temperature;
+      temp_min = tempSocValuesInBAtt.temperature[i];
     }    
   }
   return temp_min;
@@ -21,9 +21,9 @@ float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValues
   float SOC_min = MAX_SOC_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt[i].SOC < SOC_min)
+    if(tempSocValuesInBAtt.SOC[i] < SOC_min)
     {
-      SOC_min = tempSocValuesInBAtt[i].SOC;
+      SOC_min = tempSocValuesInBAtt.SOC[i];
     }    
   }
   return SOC_min;
@@ -35,9 +35,9 @@ float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValue
   float temp_max = MIN_TEMP_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt[i].temperature > temp_max)
+    if(tempSocValuesInBAtt.temperature[i] > temp_max)
     {
-      temp_max = tempSocValuesInBAtt[i].temperature;
+      temp_max = tempSocValuesInBAtt.temperature[i];
     }    
   }
   return temp_max;
@@ -49,9 +49,9 @@ float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValues
   float SOC_max = MIN_SOC_VALUE;
   for(i=0; i<noOfValues; i++)
   {
-    if(tempSocValuesInBAtt[i].SOC > SOC_max)
+    if(tempSocValuesInBAtt.SOC[i] > SOC_max)
     {
-      SOC_max = tempSocValuesInBAtt[i].SOC;
+      SOC_max = tempSocValuesInBAtt.SOC[i];
     }    
   }
   return SOC_max;
