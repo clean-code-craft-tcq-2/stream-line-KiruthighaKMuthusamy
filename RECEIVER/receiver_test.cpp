@@ -4,14 +4,11 @@
 
 TEST_CASE("Check for minimum temperature value")
 {
-  float expectedTemp;
   float result;
-  batteryParameter* tempSocValuesInBAtt = {{23,25.5},
-                                           {92.6,96},
-                                           {2, 2.1}};
-  expectedTemp = 2;
-  int noOfValues = 3;
-  result = getMinimumTempValue(tempSocValuesInBAtt, noOfValues);
+  batteryParameter* tempSocValuesInBAtt.temperature[3] = {{23,25.5,99.9};
+  batteryParameter* tempSocValuesInBAtt.SOC[3] = {{36,2.6,2.3};
+  float expectedTemp = 2;
+  result = getMinimumTempValue(tempSocValuesInBAtt);
   REQUIRE(result==expectedTemp);
 }
 
