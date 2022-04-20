@@ -23,7 +23,7 @@ float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) 
   {
     if(tempSocValuesInBAtt[i].SOC < SOC_min)
     {
-      temp_min = tempSocValuesInBAtt[i].SOC;
+      SOC_min = tempSocValuesInBAtt[i].SOC;
     }    
   }
   return SOC_min;
