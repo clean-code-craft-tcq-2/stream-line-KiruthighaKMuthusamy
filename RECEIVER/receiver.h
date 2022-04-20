@@ -5,16 +5,16 @@
 #define MAX_TEMP_VALUE 100
 #define MIN_SOC_VALUE 0
 #define MAX_SOC_VALUE 100
-#define noOfValues 50
+
 
 struct batteryParameter
 {
-  float temperature[noOfValues];
-  float SOC[noOfValues];
+  float temperature[];
+  float SOC[];
 };
 
-extern float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt);
-extern float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt);
-extern float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt);
-extern float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt);
+extern float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
+extern float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
+extern float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
+extern float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
 
