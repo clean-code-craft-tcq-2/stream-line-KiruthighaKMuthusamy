@@ -7,11 +7,11 @@
 #define MAX_SOC_VALUE 100
 #define NO_OF_VALUES 50
 
-struct batteryParameter
+typedef struct 
 {
   float temperature[NO_OF_VALUES];
   float SOC[NO_OF_VALUES];
-};
+}batteryParameter;
 
 extern float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
 extern float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues);
