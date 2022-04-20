@@ -9,7 +9,7 @@ TEST_CASE("Check for minimum temperature value")
   batteryParameter* tempSocValuesInBAtt = {{23,25.5},
                                            {92.6,96},
                                            {2, 2.1}};
-  expectedTemp = 2;
+  expectedTemp = 92.6;
   int noOfValues = 3;
   result = getMinimumTempValue(tempSocValuesInBAtt, noOfValues);
   REQUIRE(result==expectedTemp);
