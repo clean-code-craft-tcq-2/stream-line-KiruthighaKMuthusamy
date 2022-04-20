@@ -79,3 +79,17 @@ float getMaximumSOCValue(float* soc, int noOfValues)
   }
   return SOC_max;
 }
+
+float getAverageOfLastFive(float* array, int noOfValues)
+{
+  int i;
+  float average = 0;
+  for(i=0; i<5; i++)
+  {
+    average = *(array + (noOfValues-5));
+    array++;
+  }
+  average = average/5;
+  return average;
+}
+}
