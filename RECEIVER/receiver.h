@@ -19,4 +19,4 @@ extern float getMinimumTempValue(float* temp, int noOfValues);
 extern float getMinimumSOCValue(float* soc, int noOfValues);
 extern float getMaximumTempValue(float* temp, int noOfValues);
 extern float getMaximumSOCValue(float* soc, int noOfValues);
-
+extern float getAverageOfLastFive(float* array, int noOfValues);
