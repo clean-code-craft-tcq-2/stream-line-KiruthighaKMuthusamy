@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "receiver.h"
 
-float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
+float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
 {
   int i;
   float temp_min = MAX_TEMP_VALUE;
@@ -15,7 +15,7 @@ float getMinimumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues)
   return temp_min;
 }
 
-float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
+float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
 {
   int i;
   float SOC_min = MAX_SOC_VALUE;
@@ -29,7 +29,7 @@ float getMinimumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) 
   return SOC_min;
 }
 
-float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
+float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
 {
   int i;
   float temp_max = MIN_TEMP_VALUE;
@@ -43,7 +43,7 @@ float getMaximumTempValue(batteryParameter* tempSocValuesInBAtt, int noOfValues)
   return temp_max;
 }
 
-float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt, int noOfValues) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
+float getMaximumSOCValue(batteryParameter* tempSocValuesInBAtt) /* tempSocValuesInBAtt are available from the printconsole from the sender*/
 {
   int i;
   float SOC_max = MIN_SOC_VALUE;
